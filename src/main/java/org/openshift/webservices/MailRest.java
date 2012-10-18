@@ -19,7 +19,6 @@ public class MailRest {
 	@Inject 
 	private DBConnection dbConnection;
 	//private DB db = dbConnection.getDB();
-	String message = dbConnection.getMessage();
 
 	@GET()
 	@Produces("text/plain")
@@ -33,7 +32,8 @@ public class MailRest {
 	@Produces("text/plain")
 	public String getNotes(){
 		
-		
+		String message = dbConnection.getMessage();
+
 		return "This will be a DB call soon:" + message;
 	}
 }
