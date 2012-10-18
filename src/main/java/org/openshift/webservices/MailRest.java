@@ -1,6 +1,7 @@
 package org.openshift.webservices;
 
 import javax.ejb.Stateless;
+import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.ws.rs.Produces;
 import javax.ws.rs.GET;
@@ -12,7 +13,7 @@ import com.mongodb.DB;
 
 
 //Comment so we can deploy again
-@Stateless
+@RequestScoped
 @Path("/ws")
 public class MailRest {
 	
