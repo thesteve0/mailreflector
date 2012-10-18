@@ -14,6 +14,7 @@ import com.mongodb.Mongo;
 public class DBConnection {
 	
 	private DB mongoDB;
+	private String test = "why greetings to you";
 	
 
     public DBConnection() {
@@ -48,6 +49,10 @@ public class DBConnection {
 	
 	public DB getDB(){
 		return mongoDB;
+	}
+	
+	public String getMessage(){
+		return test;
 	}
 	
 	  
