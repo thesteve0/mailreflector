@@ -7,6 +7,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 
+import org.cditest.HelloWorld;
 import org.openshift.data.DBConnection;
 
 import com.mongodb.DB;
@@ -19,6 +20,8 @@ public class MailRest {
 	
 	@Inject 
 	private DBConnection dbConnection;
+	
+	 @Inject private HelloWorld hello;
 	//private DB db = dbConnection.getDB();
 
 	@GET()
@@ -33,8 +36,9 @@ public class MailRest {
 	@Produces("text/plain")
 	public String getNotes(){
 		
-		String message = dbConnection.getMessage();
+		
+		//String message = dbConnection.getMessage();
 
-		return "This will be a DB call soon:" + message;
+		return "This will be a DB call soon:" + hello.getGreeting();
 	}
 }
