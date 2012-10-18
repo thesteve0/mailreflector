@@ -25,7 +25,9 @@ public class DBConnection {
     @PostConstruct
 	public void afterCreate() {
 		System.out.println("just see if we can say anything");
+		/*
 		String host = System.getenv("OPENSHIFT_NOSQL_DB_HOST");
+		
 		System.out.println("Here is host: " + host);
 	    String mongoport = System.getenv("OPENSHIFT_NOSQL_DB_PORT");
 	    String user = System.getenv("OPENSHIFT_NOSQL_DB_USERNAME");
@@ -45,6 +47,7 @@ public class DBConnection {
         if(mongoDB.authenticate(user, password.toCharArray()) == false) {
             System.out.println("Failed to authenticate DB ");
         }
+        */
 		
 		
 	}
