@@ -12,6 +12,6 @@ public class MailRest {
 	@GET()
 	@Produces("text/plain")
 	public String sayHello() {
-	    return "Hello World!";
+	    return "Hello World In Both Places";
 	}
 }
