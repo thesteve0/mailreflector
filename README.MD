@@ -4,7 +4,7 @@
 	
 3) add this git repository to your application
 	
-	git remote add upstream -m master git://github.com/openshift/simple_node_express_mongo.git
+	git remote add upstream -m master git://github.com/thesteve0/mailreflector.git
 
 4) merge this repository into your application
 
