@@ -33,10 +33,11 @@ public class DBConnection {
 			Mongo mongo = null;
 			try {
 				mongo = new Mongo( "localhost" , 27017 );
+				mongoDB = mongo.getDB("mailreflector");
 			} catch (UnknownHostException e) {
 				System.out.println("Could not connect to Mongo on Localhost: " + e.getMessage());
 			}
-			mongoDB = mongo.getDB("mailreflector");
+			
 			
 		} else {
 			
